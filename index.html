@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>demo</title>
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet/less" href="css/index.less">
+		<script type="text/javascript" src="js/less-2.5.3.min.js" ></script>
+		<!--rem-->
+		<script>
+				(function(doc, win) {
+    var docEl = doc.documentElement,
+        isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+        dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+        dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+        dpr = 1,
+        scale = 1 / dpr,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+    docEl.dataset.dpr = dpr;
+    var metaEl = doc.createElement('meta');
+    metaEl.name = 'viewport';
+    metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+    docEl.firstElementChild.appendChild(metaEl);
+    var recalc = function() {
+        var width = docEl.clientWidth;
+        if (width / dpr > 750) {
+            width = 750 * dpr;
+        }
+        // 乘以100，px : rem = 100 : 1
+        docEl.style.fontSize = 100 * (width / 750) + 'px';
+    };
+    recalc()
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+})(document, window);
+			
+		</script>
+		<!--加前缀-->
+		<script src="js/prefixfree.min.js"></script>
+	</head>
+	<body>
+		<!--外面套一层main-box：控制当前页面的最大宽度，防止该页面在PC端预览的时候满屏展示，这样字体和盒子大小等被肆意拉伸-->
+		<main class="mainBox">
+			<!--loadingBox-->
+			<section class="loadingBox">
+				<div class="title">
+					<h1>交互简历</h1>
+					<p>欢迎来到我的频道</p>
+				</div>
+				<div class="progress">
+					<div class="pro"></div>
+				</div>
+			</section>
+			
+			<!--listen-->
+			<section class="listen">
+				<div class="title">
+					<div>
+						<h1>HR来电</h1>
+						<p>listing</p>
+					</div>
+					<p class="timing">00:00</p>
+				</div>
+				<!--phone：接电话-->
+				<div class="phone">
+					<a  class="tell" href="javascript:;"></a>
+					<span></span>
+				</div>
+				<!--hang：挂电话-->
+				<div class="Hang">
+					<div class="hang_up"></div>
+				</div>
+				<audio class="musie"  src="audio/bell.mp3" loop="loop"></audio>
+				<audio class="myself" src="audio/music.mp3" ></audio>
+			</section>
+		
+			<!--message-->
+			<section class="message">
+				<ul class="list">
+					<li class="my">
+						<i></i>
+						<span class="mm"></span>
+						面试官您好，我叫俞婷.是一名即将毕业的应届毕业生，就读于鄂州职业大学计算机学院。非常想在贵公司就职初级前端工程师</li>
+					<li class="you">
+						<i></i>
+						<span></span>
+						谈谈你都会些什么</li>
+					<li class="my">
+						<i></i>
+						<span class="mm"></span>
+						 本人会原生JS、ES6、Promise等设计模式、ajax、看过JQ源码，会less预编译器。
+						</li>
+					<li class="you">
+						<i></i>
+						<span></span>
+						你会框架吗？
+						</li>
+					<li class="my">
+						<i></i>
+						<span class="mm"></span>
+						目前熟悉的插件有JQ、zepto、swiper、makisu</li>
+						
+					<li class="you">
+						<i></i>
+						<span></span>
+						还有吗？</li>
+						
+					<li class="my">
+						<i></i>
+						<span class="mm"></span>
+						对于一些Vue、react、webpack等，这些暂时不太熟悉，不过这些是我今后的目标</li>
+						
+					<li class="you">
+						<i></i>
+						<span></span>
+						说说公司为什么录取你？</li>
+					<li class="my">
+						<i></i>
+						<span class="mm"></span>
+						在校期间有丰富的社会实践经验，愿意吃苦，肯加班，为公司创造效益。</li>
+					<li class="my">
+						<i></i>
+						<span></span>
+						希望贵公司给我一个机会</li>
+						
+					<li class="you">
+						<i></i>
+						<span></span>
+						那就来试试看，明天来上班</li>
+					<!--<li class="my">
+						<i></i>
+						<span class="mm"></span>
+						谢谢！</li>-->
+				</ul>
+				<div class="key">
+					<p class="text"></p>
+					<button class="submit"></button>
+				</div>
+			</section>
+		
+			<!--cube-->
+			<section class="cube">
+				<ul class="ulall">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+				<p><span></span>魔方可点击，、可旋转！</p>
+			</section>
+		
+			<!--detail-->
+			<section class="detail">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide page1">
+							<dl>
+								<dt>课程大纲</dt>
+								<dd><em>01</em>JavaScript核心基础部分</dd>
+								<dd><em>02</em>JavaScript核心基础部分</dd>
+								<dd><em>03</em>JavaScript核心基础部分</dd>
+								<dd><em>04</em>jQuery源码及课程：从原来到实战</dd>
+								<dd><em>05</em>设计模式和设计规范</dd>
+								<dd><em>06</em>JavaScript核心基础部分</dd>
+								<dd><em>07</em>JavaScript核心基础部分</dd>
+								<dd><em>08</em>JavaScript核心基础部分</dd>
+								<dd><em>09</em>JavaScript核心基础部分</dd>
+								<dd><em>10</em>JavaScript核心基础部分</dd>
+								<dd><em>11</em>JavaScript核心基础部分</dd>
+							</dl>
+						</div>
+						<div class="swiper-slide page2" >
+							<p>课程体系</p>
+							<div class="imgs">
+								<img src="img/zf_course1.png" alt="" />
+								<img src="img/zf_course2.png" alt="" />
+								<img src="img/zf_course3.png" alt="" />
+								<img src="img/zf_course4.png" alt="" />
+								<img src="img/zf_course5.png" alt="" />
+								<img src="img/zf_course6.png" alt="" />
+								<img src="img/zf_course.png" alt="" />
+							</div>
+						</div>
+						<div class="swiper-slide"></div>
+						<div class="swiper-slide"></div>
+						<div class="swiper-slide"></div>
+						<div class="swiper-slide"></div>
+					</div>
+				</div>
+			</section>
+		
+		</main>
+		<!--zepto这个框架和jq的用法一样-->
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script src="js/swiper-3.4.2.min.js"></script>
+		<script src="js/makisu.min.js"></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>
+		
